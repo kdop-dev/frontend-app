@@ -1,5 +1,7 @@
 # Frontend-app
 
+Simple frontend application.
+
 ## run locally
 
 ```bash
