@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Gere seu Certificado</h1>
+    <form action="end" method="POST">
+        <div class="form-group">
+            <input type="text" class="form-control" id="yourname" 
+            placeholder="Informe seu Nome" name="yourname" required
+            oninvalid="this.setCustomValidity('Preencha este campo com seu nome')"
+            oninput="this.setCustomValidity('')">
+        </div>
+    </br>
+        <button type="submit" class="btn-primary">Gerar</button>
+    </form>
+
+</div>
+{% endblock %}

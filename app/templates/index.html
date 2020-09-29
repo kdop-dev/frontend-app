@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Treinamento Kubernetes</h1>        
+
+    <h2>Cadastro Aluno</h2>
+    <form action="cadastro" method="POST" >
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" 
+            placeholder="Informe o Nome do Aluno" name="name" required
+            oninvalid="this.setCustomValidity('Informe o nome do aluno')"
+            oninput="this.setCustomValidity('')">
+        </br></br>
+            <input type="email" class="form-control" id="email" 
+            placeholder="Informe o Email do Aluno" name="email" required
+            oninvalid="this.setCustomValidity('Informe um email válido')"
+            oninput="this.setCustomValidity('')">  
+        </div>
+    </br>
+        <button type="submit" class="btn-primary">Cadastrar</button>
+    </form>
+
+</div>
+
+
+{% endblock %}

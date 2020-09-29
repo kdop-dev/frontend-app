@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div>
+    <h1>Alunos Cadastrados</h1>   
+
+    <table class="table table-striped">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+        </tr>
+        {% for aluno in alunos %}
+        <tr>
+          <td>{{ aluno.nome }}</td>
+          <td>{{ aluno.email }}</td>
+        </tr>
+        {% endfor %}        
+    </table>    
+
+    <form action="index">
+        <button type="submit" class="btn-primary">Novo Usuário</button>
+    </form>
+
+</div>
+{% endblock %}

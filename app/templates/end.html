@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<div>
+    <h1>{{ yourname }}, Obrigado por participar!</h1>        
+
+    <form action="get" method="POST">
+        <input type="hidden" name="yourname" value="{{ yourname }}">
+        <label >Baixe seu certificado: </label>        
+        <button type="submit" class="btn-primary">Download</button>
+    </form>
+</div>
+{% endblock %}
